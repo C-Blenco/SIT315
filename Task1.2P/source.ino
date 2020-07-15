@@ -14,19 +14,18 @@ void setup()
   Serial.begin(9600);
 }
 
-void loop() {
-}
-
 // Initialise motion variable as state 0 (LOW)
 int motion = 0;
 
-void motion_detected() {
-  // Flip motion variable
-  motion = !motion;
-  
+void loop() {
   // Write led pin (if 0, off, if 1, on)
   digitalWrite(led_pin, motion);
   
   // Print state
   Serial.println("Motion: " + String(motion));
+}
+
+void motion_detected() {
+  // Flip motion variable
+  motion = !motion;
 }
