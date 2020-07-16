@@ -46,8 +46,6 @@ void loop() {
   delay(100);
 }
 
-// Initialise motion variable astate 0 (LOW)
-
 
 void motion_detected() {
   // Flip motion variable
